@@ -1,0 +1,7 @@
+== T07 /admin tavakasutaja (student) tokeniga ==
+Aeg:      2026-10-23 14:29:57 EEST
+Päring:   curl http://127.0.0.1:5000/admin -H Authorization: Bearer <token>
+Oodatav:  403
+Tegelik:  403
+Vastus:   {"viga":"Õigused puuduvad"}
+Tulemus:  LÄBIS

@@ -1,0 +1,7 @@
+== T06 /profiil aegunud tokeniga ==
+Aeg:      2026-10-23 14:29:57 EEST
+Päring:   curl http://127.0.0.1:5001/profiil -H Authorization: Bearer <token>
+Oodatav:  401
+Tegelik:  401
+Vastus:   {"viga":"Token on aegunud"}
+Tulemus:  LÄBIS

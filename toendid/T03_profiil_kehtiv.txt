@@ -1,0 +1,7 @@
+== T03 /profiil kehtiva tokeniga ==
+Aeg:      2026-10-23 14:29:57 EEST
+Päring:   curl http://127.0.0.1:5000/profiil -H Authorization: Bearer <token>
+Oodatav:  200
+Tegelik:  200
+Vastus:   {"exp":1792755293,"iat":1792754993,"name":"kati","role":"student","sub":"2001"}
+Tulemus:  LÄBIS

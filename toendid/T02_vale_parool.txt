@@ -1,0 +1,7 @@
+== T02 Vale parooliga sisselogimine ==
+Aeg:      2026-10-23 14:29:57 EEST
+Päring:   curl -X POST http://127.0.0.1:5000/login -H Content-Type: application/json -d {"kasutajanimi":"kati","parool":"vale"}
+Oodatav:  401
+Tegelik:  401
+Vastus:   {"viga":"Vale kasutajanimi või parool"}
+Tulemus:  LÄBIS

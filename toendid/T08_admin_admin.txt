@@ -1,0 +1,7 @@
+== T08 /admin admini tokeniga ==
+Aeg:      2026-10-23 14:29:57 EEST
+Päring:   curl http://127.0.0.1:5000/admin -H Authorization: Bearer <token>
+Oodatav:  200
+Tegelik:  200
+Vastus:   {"teade":"Tere tulemast admini lehele, peeter!"}
+Tulemus:  LÄBIS

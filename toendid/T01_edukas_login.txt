@@ -1,0 +1,7 @@
+== T01 Edukas sisselogimine ==
+Aeg:      2026-10-23 14:29:57 EEST
+Päring:   curl -X POST http://127.0.0.1:5000/login -H Content-Type: application/json -d {"kasutajanimi":"kati","parool":"kati123"}
+Oodatav:  200
+Tegelik:  200
+Vastus:   {"kehtib_sekundit":300,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMDAxIiwibmFtZSI6ImthdGkiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc5Mjc1NDk5NywiZXhwIjoxNzkyNzU1Mjk3fQ.jujORzyrEPNYtPmzzYdllvK18VDhEG2oi8GP5HxMFZQ"}
+Tulemus:  LÄBIS

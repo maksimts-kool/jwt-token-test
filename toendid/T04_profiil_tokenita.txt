@@ -1,0 +1,7 @@
+== T04 /profiil ilma tokenita ==
+Aeg:      2026-10-23 14:29:57 EEST
+Päring:   curl http://127.0.0.1:5000/profiil
+Oodatav:  401
+Tegelik:  401
+Vastus:   {"viga":"Token puudub"}
+Tulemus:  LÄBIS
