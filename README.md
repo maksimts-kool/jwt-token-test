@@ -29,26 +29,30 @@ Vaja on Pythonit 3.9+.
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate          # Windowsis: venv\Scripts\activate
+source venv/bin/activate
 pip install -r requirements.txt
 
 export JWT_SALAVOTI="$(python -c 'import secrets; print(secrets.token_urlsafe(48))')"
-python app.py                     # http://127.0.0.1:5000
+python app.py
 ```
 
-Windows PowerShellis määra salavõti nii: `$env:JWT_SALAVOTI = python -c "import secrets; print(secrets.token_urlsafe(48))"`.
+Server töötab aadressil `http://127.0.0.1:5000`. Windowsis aktiveeri venv käsuga `venv\Scripts\activate` ja määra salavõti PowerShellis nii: `$env:JWT_SALAVOTI = python -c "import secrets; print(secrets.token_urlsafe(48))"`.
 
 ## Käsitsi testimine curl-iga
+
+Käivita teises terminalis:
 
 ```bash
 TOKEN=$(curl -s -X POST http://127.0.0.1:5000/login \
   -H "Content-Type: application/json" \
   -d '{"kasutajanimi":"kati","parool":"kati123"}' | jq -r .token)
 
-curl -i http://127.0.0.1:5000/profiil -H "Authorization: Bearer $TOKEN"   # 200
-curl -i http://127.0.0.1:5000/admin   -H "Authorization: Bearer $TOKEN"   # 403
-curl -i http://127.0.0.1:5000/profiil                                     # 401
+curl -i http://127.0.0.1:5000/profiil -H "Authorization: Bearer $TOKEN"
+curl -i http://127.0.0.1:5000/admin -H "Authorization: Bearer $TOKEN"
+curl -i http://127.0.0.1:5000/profiil
 ```
+
+Oodatavad vastused: `200` (kehtiv token), `403` (student ei pääse admini lehele), `401` (token puudub).
 
 ## Automaatsed testid
 
